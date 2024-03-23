@@ -1,0 +1,53 @@
+{
+  "name": "sitsunt",
+  "version": "1.6.0",
+  "description": "JS Client library to interact with Supabase Functions.",
+  "main": "dist/main/index.js",
+  "module": "dist/module/index.js",
+  "types": "dist/module/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf dist docs",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "build": "run-s clean format build:*",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "docs": "typedoc src/index.ts src/types.ts --excludePrivate --excludeProtected",
+    "docs:json": "typedoc --json docs/spec.json --excludeExternals src/index.ts src/types.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FrancisTorp/sitsunt.git"
+  },
+  "keywords": [
+    "ducimus",
+    "supabase"
+  ],
+  "author": "JaylenOberbrunner",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/FrancisTorp/sitsunt.git",
+  "dependencies": {
+    "adlabore": "^1.0.0",
+    "cross-fetch": "^3.1.5",
+    "enimullam": "^1.0.0",
+    "quoet": "^1.0.0",
+    "repellendusnecessitatibus": "^1.0.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.2",
+    "semantic-release-plugin-update-version-in-files": "^1.1.0",
+    "typedoc": "^0.23.10",
+    "typescript": "^4.6.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
